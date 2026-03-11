@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* Tailwind-like utility classes since you aren't using Tailwind yet */
+:root {
+  --bg-dark: #0f172a;
+  --text-slate-300: #cbd5e1;
+  --text-slate-400: #94a3b8;
+  --text-slate-500: #64748b;
+  --indigo-500: #6366f1;
+  --indigo-600: #4f46e5;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-dark);
+  color: white;
+}
+
+/* Emulating Tailwind classes used in your JSX */
+.w-full { width: 100%; }
+.h-screen { height: 100vh; }
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.space-y-5 > * + * { margin-top: 1.25rem; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.text-center { text-align: center; }
+
+/* Custom Inputs */
+input {
+  width: 100%;
+  box-sizing: border-box; 
+  /* The padding classes in JSX need these basic resets */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
